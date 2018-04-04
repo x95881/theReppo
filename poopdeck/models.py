@@ -45,7 +45,7 @@ class Cgr(models.Model):
 		return self.IDnumber + "," + self.Company + "," + self.DurationRange + "," + self.DutyDriver + "," + self.SergeantOfGuard
 
 class ConnectDay(models.Model):
-	callID = models.ForeignKey(Day, on_delete=models.CASCADE)
+	CallID = models.ForeignKey(Day, on_delete=models.CASCADE)
 	IDnumber = models.ForeignKey(Services, on_delete=models.CASCADE)
 	def __str__(self):
 		return self.CallID + "," + self.IDnumber
