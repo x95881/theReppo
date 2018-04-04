@@ -4,8 +4,9 @@ from django.db import models
 from django.db import models
 
 class Events(models.Model):
-	first = models.CharField(max_length=200)
-	last = models.CharField(max_length=200)
+	Idnumber = models.IntegerField()
+	Description = models.CharField(max_length=100)
+	DurationRange = models.CharField(max_length=30)
 	xnumber = models.CharField(max_length=8)
 	def __str__(self):
 		return self.last + "," + self.first
