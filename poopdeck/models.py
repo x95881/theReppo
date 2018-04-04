@@ -49,3 +49,12 @@ class ConnectDay(models.Model):
 	IDnumber = models.ForeignKey(Services, on_delete=models.CASCADE)
 	def __str__(self):
 		return self.CallID + "," + self.IDnumber
+  
+class Day(models.Model):
+	CalenderDate = models.DateField()
+	MealID = models.ForeignKey(Meals, on_delete=models.CASCADE)
+  EventID = models.ForeignKey(Events, on_delete=models.CASCADE)
+
+    
+
+
