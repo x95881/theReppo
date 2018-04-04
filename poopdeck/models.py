@@ -51,9 +51,18 @@ class ConnectDay(models.Model):
 		return self.CallID + "," + self.IDnumber
   
 class Day(models.Model):
+	CallID = models.IntegerField()
 	CalenderDate = models.DateField()
 	MealID = models.ForeignKey(Meals, on_delete=models.CASCADE)
-  EventID = models.ForeignKey(Events, on_delete=models.CASCADE)
+  	EventID = models.ForeignKey(Events, on_delete=models.CASCADE)
+	CGREventID = models.ForeignKey(Cgr, on_delete=models.CASCADE)
+	ServicesID = models.IntegerField()
+	Weather = models.CharField(max_length=50)
+	Uniform = models.CharField(max_length=20)
+	TAPS = models.IntegerField()
+	DescriptionOfDay = models.CharField(max_length=30)
+	def __str__(self):
+		return self.callID + "," + self.CalenderDate + "," + self.MealID + "," + self.EventID + "," + self.CGREventID + "," + self.ServicesID + "," + self.Weather + "," + self.Uniform + "," + self.TAPS + "," + self.DescriptionOfDay
 
     
 
