@@ -43,3 +43,10 @@ class Cgr(models.Model):
 	SergeantOfGuard = models.CharField(max_length=30)
 	def __str__(self):
 		return self.IDnumber + "," + self.Company + "," + self.DurationRange + "," + self.DutyDriver + "," + self.SergeantOfGuard
+
+class Day(models.Model):
+	CalenderDate = models.DateField()
+	MealID = models.ForeignKey(Meals, on_delete=models.CASCADE)
+    	EventID = models.ForeignKey(Events, on_delete=models.CASCADE)
+   	release_date = models.DateField()
+   	num_stars = models.IntegerField()
