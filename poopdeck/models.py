@@ -7,9 +7,12 @@ class Events(models.Model):
 	Idnumber = models.IntegerField()
 	Description = models.CharField(max_length=100)
 	DurationRange = models.CharField(max_length=30)
-	xnumber = models.CharField(max_length=8)
+	ImportanceStatus = models.CharField(max_length=30)
+	Location = models.CharField(max_length=30)
+	CompletionStatus = models.CharField(max_length=3)
+	#Yes or No
 	def __str__(self):
-		return self.last + "," + self.first
+		return self.Idnumber + "," + self.Description + "," + self.DurationRange + "," + self.ImportanceStatus + "," + self.Location + "," + self.CompletionStatus
 
 
 class Meals(models.Model):
