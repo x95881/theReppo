@@ -21,3 +21,12 @@ class Meals(models.Model):
 	def __str__(self):
 		return self.TypeofMeal + "," + self.SpecialOccasion + "," + self.Location + "," + self.DurationRange + "," + self.AnnouncementsMade
 	
+
+class Services(models.Model):
+	IDNumber = models.CharField(max_length=5)
+	Description = models.CharField(max_length=100)
+	DurationRange = models.CharField(max_length=30)
+	Location = models.CharField(max_length=30)
+	Status = models.CharField(max_length=30)
+	def __str__(self):
+		return self.Description + "," + self.DurationRange + "," + self.Location + "," + self.Status
