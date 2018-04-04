@@ -43,3 +43,9 @@ class Cgr(models.Model):
 	SergeantOfGuard = models.CharField(max_length=30)
 	def __str__(self):
 		return self.IDnumber + "," + self.Company + "," + self.DurationRange + "," + self.DutyDriver + "," + self.SergeantOfGuard
+
+class ConnectDay(models.Model):
+	callID = models.ForeignKey(Day, on_delete=models.CASCADE)
+	IDnumber = models.ForeignKey(Services, on_delete=models.CASCADE)
+	def __str__(self):
+		return self.CallID + "," + self.IDnumber
