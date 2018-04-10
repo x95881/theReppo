@@ -15,8 +15,8 @@ class Events(models.Model):
 
 class Meals(models.Model):
 	MealID = models.IntegerField()
-        TypeofMeal = models.CharField(max_length=20)
-        SpecialOccasion = models.CharField(max_length=30)
+	TypeofMeal = models.CharField(max_length=20)
+	SpecialOccasion = models.CharField(max_length=30)
 	Location = models.CharField(max_length=30)
 	DurationRange = models.CharField(max_length=30)
 	AnnouncementsMade = models.CharField(max_length=200)
@@ -36,23 +36,23 @@ class Services(models.Model):
 class Cgr(models.Model):
 	IDnumber = models.IntegerField()
 	Company = models.CharField(max_length=100)
-	DurationRange = models.CharField(max_legnth=30)
+	DurationRange = models.CharField(max_length=30)
 	DutyDriver = models.CharField(max_length=30)
 	SergeantOfGuard = models.CharField(max_length=30)
 	def __str__(self):
 		return self.IDnumber + "," + self.Company + "," + self.DurationRange + "," + self.DutyDriver + "," + self.SergeantOfGuard
 
-class ConnectDay(models.Model):
-	CallID = models.ForeignKey(Day, on_delete=models.CASCADE)
-	IDnumber = models.ForeignKey(Services, on_delete=models.CASCADE)
-	def __str__(self):
-		return self.CallID + "," + self.IDnumber
+#class ConnectDay(models.Model):
+#	CallID = models.ForeignKey(Day, on_delete=models.CASCADE)
+#	IDnumber = models.ForeignKey(Services, on_delete=models.CASCADE)
+#	def __str__(self):
+#		return self.CallID + "," + self.IDnumber
   
 class Day(models.Model):
 	CallID = models.IntegerField()
 	CalenderDate = models.DateField()
 	MealID = models.ForeignKey(Meals, on_delete=models.CASCADE)
-  	EventID = models.ForeignKey(Events, on_delete=models.CASCADE)
+	EventID = models.ForeignKey(Events, on_delete=models.CASCADE)
 	CGREventID = models.ForeignKey(Cgr, on_delete=models.CASCADE)
 	ServicesID = models.IntegerField()
 	Weather = models.CharField(max_length=50)
@@ -63,5 +63,9 @@ class Day(models.Model):
 		return self.callID + "," + self.CalenderDate + "," + self.MealID + "," + self.EventID + "," + self.CGREventID + "," + self.ServicesID + "," + self.Weather + "," + self.Uniform + "," + self.TAPS + "," + self.DescriptionOfDay
 
     
-
+class ConnectDay(models.Model):
+        CallID = models.ForeignKey(Day, on_delete=models.CASCADE)
+        IDnumber = models.ForeignKey(Services, on_delete=models.CASCADE)
+        def __str__(self):
+                return self.CallID + "," + self.IDnumber
 
