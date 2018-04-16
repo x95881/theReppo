@@ -9,7 +9,7 @@ def index(request):
 
 class EventsTestCase(TestCase):
         def setUp(self):
-                Event.objects.create(
+                Events.objects.create(
                         IDnumber = 100001,
                         Description = "test test test",
                         DurationRange = "100001",
