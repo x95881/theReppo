@@ -1,0 +1,13 @@
+<h1>Events List </h2>
+
+{% if events %}
+<ul>
+	{% for event in events %}
+		<li><a href="./{{event.id}}">{{event.description}}</a></li>
+	{% endfor %}
+<ul>
+{% else %}
+<p> Not sure what goes here </p>
+{% endif %}
+
+
