@@ -10,7 +10,7 @@ class Events(models.Model):
 	CompletionStatus = models.CharField(max_length=3)
 	#Yes or No
 	def __str__(self):
-		return self.IDnumber + "," + self.Description + "," + self.DurationRange + "," + self.ImportanceStatus + "," + self.Location + "," + self.CompletionStatus
+		return self.Description + "," + self.DurationRange + "," + self.ImportanceStatus + "," + self.Location + "," + self.CompletionStatus
 
 
 class Meals(models.Model):
