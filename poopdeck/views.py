@@ -21,7 +21,7 @@ def index(request):
 	template = loader.get_template('poopdeck/index.html')
 	return HttpResponse(template.render(context, request))
 
-def detail(request, Events_IDNumber):
+def detail(request, event_id):
 	try:
 		event = Events.objects.get(pk=Events_IDNumber)
 		context = {'event':event}
@@ -44,7 +44,7 @@ def addevent(request):
 		form = eventForm(request.POST)
 		if form.is_valid():
 			newevent = form.save()
-		return HttpResponseRedirect('/poopdeck')
+		return HttpResponseRedirect('/')
 	else:
 		form = eventForm()
 	return render(request, 'poopdeck/add.html', {'form': form})

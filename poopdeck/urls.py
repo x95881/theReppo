@@ -8,8 +8,8 @@ app_name='poopdeck'
 urlpatterns = [
 	path('', views.index, name='index'),
 	path('accounts/', include('django.contrib.auth.urls')),
-	path('<int:event_id>/', views.detail, name='detail'),
-	path('<int:event_id>/update', views.update, name='update'),	
+	path('event/<int:event_id>/', views.detail, name='detail'),
+	path('event/<int:event_id>/update', views.update, name='update'),	
 	path('add', views.addevent, name='addevent'),
 	path('details', views.detail, name='detail'),
 	#path('<int:cgr_id>/', views.cgr, name='cgr'),

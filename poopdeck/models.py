@@ -2,7 +2,6 @@
 from django.db import models
 
 class Events(models.Model):
-	IDnumber = models.IntegerField()
 	Description = models.CharField(max_length=100)
 	DurationRange = models.CharField(max_length=30)
 	ImportanceStatus = models.CharField(max_length=30)
@@ -13,8 +12,13 @@ class Events(models.Model):
 		return self.Description + "," + self.DurationRange + "," + self.ImportanceStatus + "," + self.Location + "," + self.CompletionStatus
 
 
+
+
+
+
+
 class Meals(models.Model):
-	MealID = models.IntegerField()
+	#Day = models.ForeignKey(Day, on_delete=models.CASCADE)
 	TypeofMeal = models.CharField(max_length=20)
 	SpecialOccasion = models.CharField(max_length=30)
 	Location = models.CharField(max_length=30)
@@ -25,7 +29,6 @@ class Meals(models.Model):
 	
 
 class Services(models.Model):
-	IDNumber = models.IntegerField()
 	Description = models.CharField(max_length=100)
 	DurationRange = models.CharField(max_length=30)
 	Location = models.CharField(max_length=30)
@@ -33,8 +36,21 @@ class Services(models.Model):
 	def __str__(self):
 		return self.IDNumber + "," + self.Description + "," + self.DurationRange + "," + self.Location + "," + self.Status
 
+class Day(models.Model):
+	CalenderDate = models.DateField()
+	Meal = models.ForeignKey(Meals, on_delete=models.CASCADE)
+	Event = models.ForeignKey(Events, on_delete=models.CASCADE)
+	#CGREventID = models.ForeignKey(Cgr, on_delete=models.CASCADE)
+	ServicesID = models.IntegerField()
+	Weather = models.CharField(max_length=50)
+	Uniform = models.CharField(max_length=20)
+	TAPS = models.IntegerField()
+	DescriptionOfDay = models.CharField(max_length=30)
+	def __str__(self):
+		return self.callID + "," + self.CalenderDate + "," + self.MealID + "," + self.EventID + "," + self.CGREventID + "," + self.ServicesID + "," + self.Weather + "," + self.Uniform + "," + self.TAPS + "," + self.DescriptionOfDay
+
 class Cgr(models.Model):
-	IDnumber = models.IntegerField()
+	Day = models.ForeignKey(Day, on_delete=models.CASCADE)
 	Company = models.CharField(max_length=100)
 	DurationRange = models.CharField(max_length=30)
 	DutyDriver = models.CharField(max_length=30)
@@ -48,23 +64,11 @@ class Cgr(models.Model):
 #	def __str__(self):
 #		return self.CallID + "," + self.IDnumber
   
-class Day(models.Model):
-	CallID = models.IntegerField()
-	CalenderDate = models.DateField()
-	MealID = models.ForeignKey(Meals, on_delete=models.CASCADE)
-	EventID = models.ForeignKey(Events, on_delete=models.CASCADE)
-	CGREventID = models.ForeignKey(Cgr, on_delete=models.CASCADE)
-	ServicesID = models.IntegerField()
-	Weather = models.CharField(max_length=50)
-	Uniform = models.CharField(max_length=20)
-	TAPS = models.IntegerField()
-	DescriptionOfDay = models.CharField(max_length=30)
-	def __str__(self):
-		return self.callID + "," + self.CalenderDate + "," + self.MealID + "," + self.EventID + "," + self.CGREventID + "," + self.ServicesID + "," + self.Weather + "," + self.Uniform + "," + self.TAPS + "," + self.DescriptionOfDay
+
 
     
 class ConnectDay(models.Model):
-        CallID = models.ForeignKey(Day, on_delete=models.CASCADE)
+        Call = models.ForeignKey(Day, on_delete=models.CASCADE)
         IDnumber = models.ForeignKey(Services, on_delete=models.CASCADE)
         def __str__(self):
                 return self.CallID + "," + self.IDnumber
