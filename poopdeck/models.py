@@ -1,5 +1,7 @@
 # Create your models here.
 from django.db import models
+from django.utils import timezone
+
 
 class Events(models.Model):
 	Description = models.CharField(max_length=100)
@@ -17,15 +19,15 @@ class Events(models.Model):
 
 
 
-class Meals(models.Model):
-	#Day = models.ForeignKey(Day, on_delete=models.CASCADE)
-	TypeofMeal = models.CharField(max_length=20)
-	SpecialOccasion = models.CharField(max_length=30)
-	Location = models.CharField(max_length=30)
-	DurationRange = models.CharField(max_length=30)
-	AnnouncementsMade = models.CharField(max_length=200)
-	def __str__(self):
-		return self.MealID + "," + self.TypeofMeal + "," + self.SpecialOccasion + "," + self.Location + "," + self.DurationRange + "," + self.AnnouncementsMade
+#class Meals(models.Model):
+#	Day = models.ForeignKey(Day, on_delete=models.CASCADE)
+#	TypeofMeal = models.CharField(max_length=20)
+#	SpecialOccasion = models.CharField(max_length=30)
+#	Location = models.CharField(max_length=30)
+#	DurationRange = models.CharField(max_length=30)
+#	AnnouncementsMade = models.CharField(max_length=200)
+#	def __str__(self):
+#		return self.MealID + "," + self.TypeofMeal + "," + self.SpecialOccasion + "," + self.Location + "," + self.DurationRange + "," + self.AnnouncementsMade
 	
 
 class Services(models.Model):
@@ -37,8 +39,9 @@ class Services(models.Model):
 		return self.IDNumber + "," + self.Description + "," + self.DurationRange + "," + self.Location + "," + self.Status
 
 class Day(models.Model):
+	#CalenderDate = models.IntegerField()
 	CalenderDate = models.DateField()
-	Meal = models.ForeignKey(Meals, on_delete=models.CASCADE)
+	#Meal = models.ForeignKey(Meals, on_delete=models.CASCADE)
 	Event = models.ForeignKey(Events, on_delete=models.CASCADE)
 	#CGREventID = models.ForeignKey(Cgr, on_delete=models.CASCADE)
 	ServicesID = models.IntegerField()
@@ -47,10 +50,22 @@ class Day(models.Model):
 	TAPS = models.IntegerField()
 	DescriptionOfDay = models.CharField(max_length=30)
 	def __str__(self):
-		return self.callID + "," + self.CalenderDate + "," + self.MealID + "," + self.EventID + "," + self.CGREventID + "," + self.ServicesID + "," + self.Weather + "," + self.Uniform + "," + self.TAPS + "," + self.DescriptionOfDay
+		return self.callID + "," + self.CalenderDate + "," + self.Meal + "," + self.EventID + "," + self.CGREventID + "," + self.ServicesID + "," + self.Weather + "," + self.Uniform + "," + self.TAPS + "," + self.DescriptionOfDay
+
+
+class Meals(models.Model):
+        Day = models.ForeignKey(Day, on_delete=models.CASCADE, default=1)
+        TypeofMeal = models.CharField(max_length=20)
+        SpecialOccasion = models.CharField(max_length=30)
+        Location = models.CharField(max_length=30)
+        DurationRange = models.CharField(max_length=30)
+        AnnouncementsMade = models.CharField(max_length=200)
+        def __str__(self):
+                return self.MealID + "," + self.TypeofMeal + "," + self.SpecialOccasion + "," + self.Location + "," + self.DurationRange + "," + self.Announce
+
 
 class Cgr(models.Model):
-	Day = models.ForeignKey(Day, on_delete=models.CASCADE)
+	Day = models.ForeignKey(Day, on_delete=models.CASCADE, default=1)
 	Company = models.CharField(max_length=100)
 	DurationRange = models.CharField(max_length=30)
 	DutyDriver = models.CharField(max_length=30)
