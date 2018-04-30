@@ -1,0 +1,173 @@
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.TopofApp {
+  background-color: grey;
+  position: relative;
+  height: 30px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.WestPointStatus {
+  -webkit-border-radius: 5px;
+  background-color: red;
+  position: relative;
+  top: 5px;
+  height: 30px;
+  width: 140px;
+  margin: 0 auto;
+}
+
+
+
+.GoldCoatsbutton {
+  -webkit-border-radius: 5px;
+  position: relative;
+  top: 20px;
+  height: 30px;
+  width: 140px;
+  margin: 0 auto;
+}
+
+.GoldCoatsButton:hover {
+  background: #999;
+}
+
+.CGRbutton {
+  -webkit-border-radius: 5px;
+  position: relative;
+  top: 10;
+  height: 30px;
+  width: 140px;
+  margin: 0 auto;
+}
+
+.CGRbutton:hover {
+  background: #999;
+}
+
+.Firstiebutton {
+  -webkit-border-radius: 5px;
+  position: relative;
+  top: 30px;
+  height: 30px;
+  width: 140px;
+  margin: 0 auto;
+}
+
+.Firstiebutton:hover {
+  background: #999;
+}
+
+.Cowbutton {
+  -webkit-border-radius: 5px;
+  position: relative;
+  top: 35px;
+  height: 30px;
+  width: 140px;
+  margin: 0 auto;
+}
+
+.Cowbutton:hover {
+  background: #999;
+}
+
+.Feedbackbutton {
+  -webkit-border-radius: 5px;
+  position: relative;
+  top: 40px;
+  height: 30px;
+  width: 140px;
+  margin: 0 auto;
+}
+
+.Feedbackbutton:hover {
+  background: #999;
+}
+
+.BottomofApp {
+  background-color: lightgrey;
+  position: fixed;
+  bottom: 219;
+  height: 50px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.HomeButton {
+  -webkit-border-radius: 3px;
+  background-color: white;
+  position: relative;
+  left: 8px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.Homebutton:hover {
+  background: orange;
+}
+
+.CalenderButton {
+  -webkit-border-radius: 3px;
+  background-color: white;
+  position: relative;
+  left: 57px;
+  bottom: 35px;
+  width: 40px;
+  height: 40px;
+}
+
+.Calenderbutton:hover {
+  background: orange;
+}
+
+.UniformButton {
+  -webkit-border-radius: 3px;
+  background-color: white;
+  position: relative;
+  left: 106px;
+  bottom: 75px;
+  width: 40px;
+  height: 40px;
+}
+
+.UniformButton:hover {
+  background: orange;
+}
+
+.MealButton {
+  -webkit-border-radius: 3px;
+  background-color: white;
+  position: relative;
+  left: 155px;
+  bottom: 115px;
+  width: 40px;
+  height: 40px;
+}
+
+.MealButton:hover {
+  background: orange;
+}
+.main {
+  width: 200px;
+  height: 320px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+
+div {
+  text-align: center;
+  /* border-radius */
+  /* -webkit-border-radius: 5px;
+ *   -moz-border-radius: 5px;
+ *     border-radius: 5px;
+ *       /* box-shadow */
+  -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+  -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+  box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
