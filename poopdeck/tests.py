@@ -9,7 +9,7 @@ def index(request):
 
 class EventsTestCase(TestCase):
         def setUp(self):
-                Event.objects.create(
+                Events.objects.create(
                         IDnumber = 100001,
                         Description = "test test test",
                         DurationRange = "100001",
@@ -19,5 +19,5 @@ class EventsTestCase(TestCase):
                 )
         def test_event_was_made(self):
                 # checks if data can be retreived 
-                test_event = Event.objects.get(IDnumber = 100001)
+                test_event = Events.objects.get(IDnumber = 100001)
                 test_event
