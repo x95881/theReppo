@@ -6,7 +6,7 @@ class Day(models.Model):
 	#CalenderDate = models.IntegerField()
 	CalenderDate = models.DateField()
 	#Meal = models.ForeignKey(Meals, on_delete=models.CASCADE)
-	Event = models.ForeignKey(Events, on_delete=models.CASCADE)
+	#Events = models.ForeignKey(Events, on_delete=models.CASCADE)
 	#CGREventID = models.ForeignKey(Cgr, on_delete=models.CASCADE)
 	ServicesID = models.IntegerField()
 	Weather = models.CharField(max_length=50)
@@ -17,7 +17,7 @@ class Day(models.Model):
 		return self.callID + "," + self.CalenderDate + "," + self.Meal + "," + self.EventID + "," + self.CGREventID + "," + self.ServicesID + "," + self.Weather + "," + self.Uniform + "," + self.TAPS + "," + self.DescriptionOfDay
 
 class Events(models.Model):
-	Day = models.ForeignKey(Day, on_delete=models.CASCADE, default=1)
+	#Day = models.ForeignKey(Day, on_delete=models.CASCADE, default=1)
 	Description = models.CharField(max_length=100)
 	DurationRange = models.CharField(max_length=30)
 	ImportanceStatus = models.CharField(max_length=30)
