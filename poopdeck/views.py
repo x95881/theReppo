@@ -7,7 +7,7 @@ from .models import Meals
 from .models import Day
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-
+import datetime
 from .forms import eventForm
 
 
@@ -16,8 +16,9 @@ from .forms import eventForm
 
 def index(request):
 	#return HttpResponse("Hello, world. You're at the end of the line honey")
-	events = Events.objects.all() #Grab all events from database
-	context = {'events': events} #Fill a context with the events list
+	day = Day.objects.get(CalenderDate = datetime.date.today())
+	events = day.events_set.all() #Grab all events from database
+	context = {'events': events, 'day': day} #Fill a context with the events list
 	template = loader.get_template('poopdeck/index.html')
 	return HttpResponse(template.render(context, request))
 
