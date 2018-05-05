@@ -19,7 +19,8 @@ def index(request):
 	day = Day.objects.get(CalenderDate = datetime.date.today())
 	events = day.events_set.all() #Grab all events from database
 	meals = day.meals_set.all()
-	context = {'events': events, 'day': day, 'meals': meals} #Fill a context with the events list
+	cgr = day.cgr_set.all()
+	context = {'events': events, 'day':day, 'meals': meals, 'cgr':cgr} #Fill a context with the events list
 	template = loader.get_template('poopdeck/index.html')
 	return HttpResponse(template.render(context, request))
 

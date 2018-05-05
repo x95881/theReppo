@@ -1,6 +1,11 @@
 {% extends 'poopdeck/base1.html' %}
-{% block content %}
 
+
+<!-------------------------->
+<!-- EVENT LIST VIEW CODE-->
+<!-------------------------->
+
+{% block content %}
 <h1>Events List </h2>
 
 {% if events %}
@@ -20,6 +25,9 @@
 {% endblock %}
 
 
+<!-------------------------->
+<!-- MEAL LIST VIEW CODE-->
+<!-------------------------->
 
 {% block meallist %}
 
@@ -38,3 +46,27 @@
 <a href="add"> Add Meal to the Database </a>
 
 {% endblock %}
+
+
+<!-------------------------->
+<!-- CGR LIST VIEW CODE-->
+<!-------------------------->
+
+{% block cgrlist %}
+<h1>CGR</h2>
+
+{% if cgr %}
+<ul>
+        {% for cgr in cgr %}
+                <li><a href="cgr/{{cgr.id}}">{{cgr.Company}}</a> Occasion {{cgr.DurationRange}} and located at {{cgr.DutyDriver}} for {{cgr.SergeantOfGuard}}</li>
+        {% endfor %}
+<ul>
+{% else %}
+<p> Not sure what goes here </p>
+{% endif %}
+
+<a href="add"> Update CGR in the Database </a>
+
+
+{% endblock %}
+
