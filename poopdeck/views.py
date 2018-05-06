@@ -33,6 +33,23 @@ def detail(request, event_id):
 		raise Http404("Event does not exist")
 	return render(request, 'poopdeck/details.html', context)
 
+def cgr(request, cgr_id):
+	try:
+		cgr = Cgr.objects.get(pk=cgr_id)
+		context = {'cgr':cgr}
+	except Cgr.DoesNotExist:
+		raise Http404("Cgr does not exist")
+	return render(request, 'poopdeck/cgr.html', context)
+
+def meal(request, meal_id):
+	try:
+		meal = Meals.objects.get(pk=meal_id)
+		context = {'meal': meal}
+	except Meals.DoesNotExist:
+		raise Http404("No meal for this day")
+	return render(request, 'poopdeck/meal.html',context)
+
+
 def update(request, Events__IDNumber):
 	new_IDNumber = request.POST['IDnumber']
 	new_Description = request.POST['descirption']
