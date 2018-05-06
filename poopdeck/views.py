@@ -18,13 +18,14 @@ def index(request):
 	#return HttpResponse("Hello, world. You're at the end of the line honey")
 	day = Day.objects.get(CalenderDate = datetime.date.today())
 	events = day.events_set.all() #Grab all events from database
-	context = {'events': events, 'day': day} #Fill a context with the events list
+	meals = day.meals_set.all()
+	context = {'events': events, 'day': day, 'meals': meals} #Fill a context with the events list
 	template = loader.get_template('poopdeck/index.html')
 	return HttpResponse(template.render(context, request))
 
 def detail(request, event_id):
 	try:
-		event = Events.objects.get(pk=Events_IDNumber)
+		event = Events.objects.get(pk=event_id)
 		context = {'event':event}
 	except Events.DoesNotExist:
 		raise Http404("Event does not exist")

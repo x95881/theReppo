@@ -18,3 +18,23 @@
 
 
 {% endblock %}
+
+
+
+{% block meallist %}
+
+<h1>Meals List </h2>
+
+{% if meals %}
+<ul>
+        {% for meal in meals %}
+                <li><a href="meal/{{meal.id}}">{{meal.TypeofMeal}}</a> Occasion {{meal.SpecialOccasion}} and located at {{meal.Location}} for {{meal.DurationRange}}. Any Annoucements: {{meal.AnnouncementsMade}}</li>
+        {% endfor %}
+<ul>
+{% else %}
+<p> Not sure what goes here </p>
+{% endif %}
+
+<a href="add"> Add Meal to the Database </a>
+
+{% endblock %}
