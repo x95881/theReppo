@@ -5,17 +5,40 @@
   <meta charset="utf-8">
 
   <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
+  <meta name="description" content="Poop Deck">
   <meta name="author" content="SitePoint">
+
+
+<style> 
+
+div {
+    text-align: center;
+    color: gold;
+}
+
+body {
+    background-color: grey;
+}
+
+
+</style> 
 
 </head>
 
+
+<div>
 <body>
-  <<h1> {{ meal.Location }} </h1>
-  <<h1> {{ meal.Day  }} </h1>
-  <<h1> {{ meal.DurationRange  }} </h1>
-  <<h1> {{ meal.TypeofMeal  }} </h1>
-  <<h1> {{ meal.AnnouncementsMade  }} </h1>
-  <<h1> {{ meal.SpecialOccasion}} </h1> 
+<ul>
+  <h1> Poop Deck 
+  <h1> </h1>
+  <h1> Location:  {{ meal.Location }} </h1>
+  <h1> Day: {{ meal.Day  }} </h1>
+  <h1> Duration: {{ meal.DurationRange  }} </h1>
+  <h1> Type: {{ meal.TypeofMeal  }} </h1>
+  <h1> Announcements: {{ meal.AnnouncementsMade  }} </h1>
+  <h1> Special Occation: {{ meal.SpecialOccasion}} </h1> 
+</ul>
 </body>
+</div>
+
 </html>
