@@ -92,7 +92,7 @@
 									<a href="#meals" class="hvr-overline-from-center scroll">Meals</a>
 								</li>
 								<li>
-									<a href="#services" class="hvr-overline-from-center scroll">Services</a>
+									<a href="#serviced" class="hvr-overline-from-center scroll">Services</a>
 								</li>
 							</ul>
 						</nav>
@@ -114,11 +114,11 @@
 						<li>
 
 							<div class="banner-w3lstext">
-								<h3 style="-webkit-text-stroke: .5px black;">Welcome to the world's premier leadership institute</h3>
+								<h3 style="color: white; -webkit-text-stroke: 1px black; text-shadow: 2px 2px black;">Welcome to the world's premier leadership institute</h3>
 								 
 							                
 
-								<p>For all your scheduling needs at West Point.</p>
+								
 								<!--<div class="video-pop-wthree">
 									<a href="#small-dialog1" class="view play-icon popup-with-zoom-anim ">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>Watch Our Video</a>
@@ -131,7 +131,7 @@
 						<li>
 
 							<div class="banner-w3lstext">
-								<h3 style="-webkit-text-stroke: .5px black;">New and Improved Poop Deck App!</h3>
+								<h3 style="color: white; -webkit-text-stroke: 1px black; text-shadow: 2px 2px black;">New and Improved Poop Deck App!</h3>
 								<p>Better than before!</p>
 							<!--	<div class="video-pop-wthree">
 									<a href="#small-dialog2" class="view play-icon popup-with-zoom-anim ">
@@ -145,7 +145,7 @@
 						<li>
 
 							<div class="banner-w3lstext">
-								<h3 style="-webkit-text-stroke: .5px black;">Refer to the top navigation bar for quick reference!</h3>
+								<h3 style="color: white; -webkit-text-stroke: 1px black; text-shadow: 2px 2px black;">Refer to the top navigation bar for quick reference!</h3>
 							
 							<!--	<div class="video-pop-wthree">
 									<a href="#small-dialog3" class="view play-icon popup-with-zoom-anim ">
@@ -171,7 +171,7 @@
 			<h3 class="title" >West Point Status
 				<img src="images/logo2.png" alt="" />
 			</h3>
-			<h2 style="color: gold; -webkit-text-stroke: .5px black;"> Normal Army Day </h2>
+			<h2 style="color: black; -webkit-text-stroke: .2px gold;"> Normal Army Day </h2>
 			<br>
 			<br>
 			<div class="about-top">
@@ -265,7 +265,6 @@
 				<div class="left-services-agile1">
 					<i class="fa fa-american-sign-language-interpreting i1" aria-hidden="true"></i>
 					<h4>Duration</h4>
-					<a name=meals></a>
 					<div class="clearfix"></div>
 					<br>
 					{% block durationrange %}
@@ -291,15 +290,23 @@
 					{% endblock %}
 					<br>
 				</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 			</div>
+			<a name=meals></a>
+			{% block meallist %}
+			{% endblock %}
 			<br>
 			<br>
 			<br>
+			<br>
+			<a name=serviced></a>
 			{% block services %}
 			{% endblock %}	
 
-			{% block meallist %}
-			{% endblock %}
 
 			<br>
 			<br>
@@ -631,7 +638,7 @@
 	<!-- //blog -->
 
 	<!-- gallery -->
-	<div class="gallery" id="gallery">
+	<!-- <div class="gallery" id="gallery">
 		<div class="container">
 			<h3 class="title">Our Gallery
 				<img src="images/logo2.png" alt="" />
@@ -704,6 +711,7 @@
 			</div>
 		</div>
 	</div>
+	-->
 	<!-- //gallery -->
 
 	<!-- contact -->
@@ -795,7 +803,7 @@
 				</ul>
 			</div>
 			<div class="col-xs-4 agileinfo_footer_grid">
-				<h4>Instagram Posts</h4>
+				<h4>Beat NAVY!</h4>
 				<div class="agileinfo_footer_grid1">
 					<a href="#">
 						<img src="images/f1.jpg" alt=" " class="img-responsive">

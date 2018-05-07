@@ -11,7 +11,9 @@
 {% if events %}
 <ul>
 	{% for event in events %}
-		<h3><a href="event/{{event.id}}">{{event.Description}}</a>. The Event will be held at: {{event.Location}}. This Event is: {{event.ImportanceStatus}} importance.</h3>
+		
+		<h3><a href="event/{{event.id}}"><h1 style="color:black; -webkit-text-stroke: .3px gold;">{{event.Description}}</h1></a></h3>
+		<br>
 	{% endfor %}
 <ul>
 {% else %}
@@ -75,7 +77,7 @@
 {% block company %}
 
 {% for cgr in cgr %}
-                <h3>{{cgr.Company}}</h3>
+                <h3 style="color:black; -webkit-text-stroke: .3px gold;">{{cgr.Company}}</h3>
         {% endfor %}
 
 {% endblock %}
@@ -83,7 +85,7 @@
 {% block durationrange %}
 
 {% for cgr in cgr %}
-                <h3>{{cgr.DurationRange}}</h3>
+                <h3 style="color:black; -webkit-text-stroke: .3px gold;">{{cgr.DurationRange}}</h3>
         {% endfor %}
 
 {% endblock %}
@@ -91,7 +93,7 @@
 {% block dutydriver %}
 
 {% for cgr in cgr %}
-                <h3>{{cgr.DutyDriver}}</h3>
+                <h3 style="color:black; -webkit-text-stroke: .3px gold;">{{cgr.DutyDriver}}</h3>
         {% endfor %}
 
 {% endblock %}
@@ -99,7 +101,7 @@
 {% block sergeantofguard %}
 
 {% for cgr in cgr %}
-                <h3>{{cgr.SergeantOfGuard}}</h3>
+                <h3 style="color:black; -webkit-text-stroke: .3px gold;">{{cgr.SergeantOfGuard}}</h3>
         {% endfor %}
 
 {% endblock %}
