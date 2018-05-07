@@ -14,6 +14,7 @@ urlpatterns = [
 	path('details', views.detail, name='detail'),
 	path('cgr/<int:cgr_id>/', views.cgr, name='cgr'),
 	path('meal/<int:meal_id>/', views.meal, name='meal'),
+	path('services/<int:services_id>/', views.services, name='services'),
 	#path('<int:cgr_id>/', views.cgr, name='cgr'),
 	#path('<int:cgr_id>/update', views.update, name='update'),
 ]

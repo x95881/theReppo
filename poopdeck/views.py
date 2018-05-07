@@ -31,7 +31,7 @@ def detail(request, event_id):
 		context = {'event':event}
 	except Events.DoesNotExist:
 		raise Http404("Event does not exist")
-	return render(request, 'poopdeck/details.html', context)
+	return render(request, 'poopdeck/event.html', context)
 
 def cgr(request, cgr_id):
 	try:
@@ -49,6 +49,13 @@ def meal(request, meal_id):
 		raise Http404("No meal for this day")
 	return render(request, 'poopdeck/meal.html',context)
 
+def services(request, meal_id):
+        try:
+                services = Services.objects.get(pk=services_id)
+                context = {'services': services}
+        except Meals.DoesNotExist:
+                raise Http404(" No services ")
+        return render(request, 'poopdeck/services.html',context)
 
 def update(request, Events__IDNumber):
 	new_IDNumber = request.POST['IDnumber']
@@ -58,7 +65,7 @@ def update(request, Events__IDNumber):
 	event.Description = new_Description
 	event.save()
 	context = {'event':event}
-	return render(request, 'poopdeck/details.html', context)
+	return render(request, 'poopdeck/event.html', context)
 
 def addevent(request):
 	if request.method == 'POST':
