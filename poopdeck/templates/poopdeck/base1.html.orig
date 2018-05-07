@@ -11,7 +11,7 @@
 {% load static %}
 
 <head>
-	<title>United States Military Academy PoopDeck</title>
+	<title>Tennis Hub Sports Category Flat Bootstrap Responsive Web Template | Home :: w3layouts</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -65,7 +65,11 @@
 						<div class="logo">
 							<h1>
 								<a href="index.html">
+<<<<<<< HEAD
+									The Poop Deck
+=======
 									Poop Deck App
+>>>>>>> dda023637f8f5e9d4986bb3cf54d85729a89c5e4
 									<img class="logo-position" src="images/logo4.png" alt="" />
 								</a>
 							</h1>
@@ -83,16 +87,16 @@
 									<a href="#status" class="hvr-overline-from-center scroll">West Point Status</a>
 								</li>
 								<li>
-									<a href="#events" class="hvr-overline-from-center scroll">Events</a>
-								</li>
-								<li>
 									<a href="#cgr" class="hvr-overline-from-center scroll">Cgr</a>
 								</li>
 								<li>
-									<a href="#meals" class="hvr-overline-from-center scroll">Meals</a>
+									<a href="#goldcoats" class="hvr-overline-from-center scroll">Gold Coats</a>
 								</li>
 								<li>
-									<a href="#services" class="hvr-overline-from-center scroll">Services</a>
+									<a href="#firstieclub" class="hvr-overline-from-center scroll">Firstie</a>
+								</li>
+								<li>
+									<a href="#cowclub" class="hvr-overline-from-center scroll">Cow Club</a>
 								</li>
 							</ul>
 						</nav>
@@ -114,45 +118,45 @@
 						<li>
 
 							<div class="banner-w3lstext">
-								<h3>Welcome to the world's premier leadership institute</h3>
-								 
-							                
+								<h3>a wide selection of tennis accessories</h3>
+								 {% block content %}
+							                {% endblock %}
 
-								<p>For all your scheduling needs at West Point.</p>
-								<!--<div class="video-pop-wthree">
+								<p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+								<div class="video-pop-wthree">
 									<a href="#small-dialog1" class="view play-icon popup-with-zoom-anim ">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>Watch Our Video</a>
 									<div id="small-dialog1" class="mfp-hide w3ls_small_dialog wthree_pop">
 										<iframe src="https://player.vimeo.com/video/137808596?title=0&byline=0&portrait=0"></iframe>
 									</div>
-								</div> -->
-							</div> 
-						</li>
-						<li>
-
-							<div class="banner-w3lstext">
-								<h3>New and Improved Poop Deck App!</h3>
-								<p>Better than before!</p>
-							<!--	<div class="video-pop-wthree">
-									<a href="#small-dialog2" class="view play-icon popup-with-zoom-anim ">
-										<i class="fa fa-play-circle" aria-hidden="true"></i>Watch Our Video</a>
-									<div id="small-dialog2" class="mfp-hide w3ls_small_dialog wthree_pop">
-										<iframe src="https://player.vimeo.com/video/137808596?title=0&byline=0&portrait=0"></iframe>
-									</div>
-								</div> -->
+								</div>
 							</div>
 						</li>
 						<li>
 
 							<div class="banner-w3lstext">
-								<h3>Refer to the top navigation bar for quick reference!</h3>
-							
-							<!--	<div class="video-pop-wthree">
+								<h3>everything you need for tennis playing</h3>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+								<div class="video-pop-wthree">
+									<a href="#small-dialog2" class="view play-icon popup-with-zoom-anim ">
+										<i class="fa fa-play-circle" aria-hidden="true"></i>Watch Our Video</a>
+									<div id="small-dialog2" class="mfp-hide w3ls_small_dialog wthree_pop">
+										<iframe src="https://player.vimeo.com/video/137808596?title=0&byline=0&portrait=0"></iframe>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+
+							<div class="banner-w3lstext">
+								<h3>we build leaders on the court</h3>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+								<div class="video-pop-wthree">
 									<a href="#small-dialog3" class="view play-icon popup-with-zoom-anim ">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>Watch Our Video</a>
 									<div id="small-dialog3" class="mfp-hide w3ls_small_dialog wthree_pop">
 										<iframe src="https://player.vimeo.com/video/137808596?title=0&byline=0&portrait=0"></iframe>
-									</div> -->
+									</div>
 								</div>
 							</div>
 						</li>
@@ -167,38 +171,28 @@
 	<!-- welcome -->
 	<div class="about" id="about">
 		<div class="container">
-			<a name=status></a>
-			<h3 class="title" >West Point Status
+			<h3 class="title">West Point Status
 				<img src="images/logo2.png" alt="" />
 			</h3>
-
-			<h4> [CODE RED] </h4>
-			<br>
-			<br>
-			<br>
 			<div class="about-top">
 				<div class="col-md-6 about-img-agile">
 					<img class="img-responsive" src="images/about63.png" alt="">
 				</div>
 				<div class="col-md-6 about-wel">
-					<a name=events></a>
-					<h2>Event List</h2>
-					{% block content %}
-					{% endblock %}
+					<h2>West Point Status</h2>
 					<p>
 					Todays date is:
 					<script> document.write(new Date().toLocaleDateString()); </script> <!-- https://stackoverflow.com/questions/32540044/html-display-current-date -->
 					</p>
-					<a name=events></a>
 					<ul>
 						<li>
-							<i class="glyphicon glyphicon-ok"></i>Check your meals!</li>
+							<i class="glyphicon glyphicon-ok"></i>Masagni dolores eoquie voluptaquisquam</li>
 						<li>
-							<i class="glyphicon glyphicon-ok"></i>Look up upcoming events.</li>
+							<i class="glyphicon glyphicon-ok"></i>Ipsumquia dolor sitamnetase adipiscquam eiuse</li>
 						<li>
-							<i class="glyphicon glyphicon-ok"></i>Christian Banks is an idiot</li>
+							<i class="glyphicon glyphicon-ok"></i>Basmodi temporant, ut laboreas dolore</li>
 						<li>
-							<i class="glyphicon glyphicon-ok"></i>Nick Velez is a dumbass</li>
+							<i class="glyphicon glyphicon-ok"></i>Ipsumquia dolor sitamnetase adipiscquam eiuse</li>
 					</ul>
 					<!-- <div class="video-agile">
 						<iframe src="https://player.vimeo.com/video/137808596?title=0&byline=0&portrait=0"></iframe>
@@ -215,19 +209,19 @@
 		<div class="container">
 			<div class="stats-info">
 				<div class="col-md-3 col-sm-3 stats-grid slideanim">
-					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='385' data-delay='2' data-increment="1">300</div>
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='300' data-delay='2' data-increment="1">300</div>
 					<p class="stats-info">Days until Graduation</p>
 				</div>
 				<div class="col-md-3 col-sm-3 stats-grid slideanim">
-					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='457' data-delay='2' data-increment="1">200</div>
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='200' data-delay='2' data-increment="1">200</div>
 					<p class="stats-info">Days until Spring Leave</p>
 				</div>
 				<div class="col-md-3 col-sm-3 stats-grid slideanim">
-					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='214' data-delay='2' data-increment="10">100</div>
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='100' data-delay='2' data-increment="10">100</div>
 					<p class="stats-info">Days until Winter Leave</p>
 				</div>
 				<div class="col-md-3 col-sm-3 stats-grid slideanim">
-					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='188' data-delay='2' data-increment="1">20</div>
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='20' data-delay='2' data-increment="1">20</div>
 					<p class="stats-info">Days until Thanksgiving Leave</p>
 				</div>
 				<div class="clearfix"></div>
@@ -239,7 +233,6 @@
 	<!-- services -->
 	<div class="services" id="services">
 		<div class="container">
-			<a name=cgr></a>
 			<h3 class="title">CGR
 				<p>	
 				Todays date is:
@@ -247,8 +240,6 @@
 				</p>
 				<img src="images/logo2.png" alt="" />
 			</h3>
-				{% block cgrlist %}
-				{% endblock %}
 			<div class="col-md-6 left-services-agile">
 				<div class="left-services-agile1">
 					<i class="fa fa-clone i1" aria-hidden="true"></i>
@@ -259,11 +250,8 @@
 				<div class="left-services-agile1">
 					<i class="fa fa-american-sign-language-interpreting i1" aria-hidden="true"></i>
 					<h4>Duration</h4>
-					<a name=meals></a>
 					<div class="clearfix"></div>
 					<p>Today</p>
-					{% block meallist %}
-					{% endblock %}
 				</div>
 				<div class="left-services-agile1">
 					<i class="fa fa-magic i1" aria-hidden="true"></i>
@@ -280,7 +268,6 @@
 			</div>
 			<div class="col-md-6 agileits_updates_grid_right">
 				<h3>Helpful Information</h3>
-				<a name=services></a>
 				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="panel panel-default">
 						<div class="panel-heading" role="tab" id="headingOne">
@@ -501,9 +488,10 @@
 						</div>
 						<div class="detail-bottom">
 							<a href="#" data-toggle="modal" data-target="#myModal">
-								<h6>Phone App Poopdeck Coming soon!</h6>
+								<h6>Eiusmod tempor incididunt ut labore sed do eiusmod</h6>
 							</a>
-							<p>Leave feedback through email @ Christian.Banks@usma.edu!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod
+								tempor incididunt ut labore</p>
 						</div>
 					</div>
 				</div>
@@ -535,9 +523,10 @@
 						</div>
 						<div class="detail-bottom">
 							<a href="#" data-toggle="modal" data-target="#myModal">
-								<h6>Created by CDT Sam Kim'19, Christian Banks'19 & Nick Velez'19</h6>
+								<h6>Eiusmod tempor incididunt ut labore sed do eiusmod</h6>
 							</a>
-							<p>Please let us know any improvements you think we should add!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod
+								tempor incididunt ut labore</p>
 						</div>
 					</div>
 				</div>
@@ -569,9 +558,10 @@
 						</div>
 						<div class="detail-bottom">
 							<a href="#" data-toggle="modal" data-target="#myModal">
-								<h6>More updates to come!</h6>
+								<h6>Eiusmod tempor incididunt ut labore sed do eiusmod</h6>
 							</a>
-							<p>Data points have not been fully populated yet</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sed do eiusmod
+								tempor incididunt ut labore</p>
 						</div>
 					</div>
 				</div>
@@ -592,7 +582,8 @@
 					<div class="modal-body">
 						<h5>Tennis Hub</h5>
 						<img src="images/1.jpg" alt=" " class="img-responsive" />
-						<p> Lasted updated 5/7/18
+						<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+							consequatur? Quis autem vel eum iure reprehenderit qui in ea.
 						</p>
 					</div>
 				</section>
@@ -616,7 +607,7 @@
 							<figure class="effect-bubba">
 								<img class="img-responsive" src="images/b3.jpg" alt="">
 								<figcaption>
-									<h4 class="gal">PoopDeck</h4>
+									<h4 class="gal">Tennis Hub</h4>
 								</figcaption>
 							</figure>
 						</a>
@@ -626,7 +617,7 @@
 							<figure class="effect-bubba">
 								<img class="img-responsive" src="images/g6.jpg" alt="">
 								<figcaption>
-									<h4 class="gal">PoopDeck</h4>
+									<h4 class="gal">Tennis Hub</h4>
 								</figcaption>
 							</figure>
 						</a>
@@ -636,7 +627,7 @@
 							<figure class="effect-bubba">
 								<img class="img-responsive" src="images/g5.jpg" alt="">
 								<figcaption>
-									<h4 class="gal">Poop Deck</h4>
+									<h4 class="gal">Tennis Hub</h4>
 								</figcaption>
 							</figure>
 						</a>
@@ -646,7 +637,7 @@
 							<figure class="effect-bubba">
 								<img class="img-responsive" src="images/g4.jpg" alt="">
 								<figcaption>
-									<h4 class="gal">Poop Deck</h4>
+									<h4 class="gal">Tennis Hub</h4>
 								</figcaption>
 							</figure>
 						</a>
@@ -656,7 +647,7 @@
 							<figure class="effect-bubba">
 								<img class="img-responsive" src="images/b1.jpg" alt="">
 								<figcaption>
-									<h4 class="gal">Poop Deck</h4>
+									<h4 class="gal">Tennis Hub</h4>
 								</figcaption>
 							</figure>
 						</a>
@@ -666,7 +657,7 @@
 							<figure class="effect-bubba">
 								<img class="img-responsive" src="images/b2.jpg" alt="">
 								<figcaption>
-									<h4 class="gal">Poop Deck</h4>
+									<h4 class="gal">Tennis Hub</h4>
 								</figcaption>
 							</figure>
 						</a>
@@ -696,7 +687,7 @@
 							</div>
 							<div class="col-xs-8 contact-grdr-w3l">
 								<ul>
-									<li>+3851234569</li>
+									<li>+3402 890 679</li>
 								</ul>
 							</div>
 							<div class="clearfix"> </div>
@@ -707,7 +698,7 @@
 							</div>
 							<div class="col-xs-8 contact-grdr-w3l">
 								<ul>
-									<li>745 Brewerton Road</li>
+									<li>345 Diamond Street</li>
 								</ul>
 							</div>
 							<div class="clearfix"> </div>
@@ -719,7 +710,7 @@
 							<div class="col-xs-8 contact-grdr-w3l">
 								<ul>
 									<li>
-										<a href="mailto:samuel.kim@usma.edu">samuel.kim@usma.edu</a>
+										<a href="mailto:info@example.com">info@example.com</a>
 									</li>
 								</ul>
 							</div>
@@ -747,21 +738,21 @@
 		<div class="container">
 			<div class="col-xs-4 agileinfo_footer_grid">
 				<h4>About Us</h4>
-				<p> This is a class project for IT394.
-					<span>We utilized DJANGO in order to create a web application.</span>
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					<span>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
 				</p>
 			</div>
 			<div class="col-xs-4 agileinfo_footer_grid">
 				<h4>Address</h4>
 				<ul>
 					<li>
-						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>745 Brewerton Road, West Point</li>
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span> 738 Diamond Road, New York City</li>
 					<li>
 						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 						<a href="mailto:info@example.com">info@example.com</a>
 					</li>
 					<li>
-						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (385) 9185752</li>
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (0123) 0111 111 222</li>
 					<li>
 						<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Mon-Sat 09:00 AM - 05:00PM </li>
 				</ul>
@@ -810,7 +801,8 @@
 				<div class="clearfix"> </div>
 			</div>
 			<div class="w3agile_footer_copy">
-				<p>© 2018 Poop Deck. All Rights Reserved.
+				<p>© 2018 Tennis Hub. All rights reserved | Design by
+					<a href="http://w3layouts.com/">W3layouts.</a>
 				</p>
 			</div>
 		</div>
