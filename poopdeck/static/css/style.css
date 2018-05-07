@@ -697,11 +697,8 @@ a.pa_italic:focus {
 /*-- team --*/
 
 .team {
-<<<<<<< HEAD
     background: url(../images/marchingcadets.jpg)no-repeat;
-=======
-    background: url(../images/boxingcadets.jpg)no-repeat;
->>>>>>> 6d0f6a615c61be69bc331095f30188f8d9d6255b
+
     background-size: cover;
 }
 
