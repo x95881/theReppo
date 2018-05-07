@@ -254,30 +254,40 @@
 					<i class="fa fa-clone i1" aria-hidden="true"></i>
 					<h4>Company</h4>
 					<div class="clearfix"></div>
-					<p>Company Info Here</p>
+					
+					{% block company %}
+					{% endblock %}
 				</div>
 				<div class="left-services-agile1">
 					<i class="fa fa-american-sign-language-interpreting i1" aria-hidden="true"></i>
 					<h4>Duration</h4>
 					<a name=meals></a>
 					<div class="clearfix"></div>
-					<p>Today</p>
-					{% block meallist %}
+					
+					{% block durationrange %}
 					{% endblock %}
+
+				
 				</div>
 				<div class="left-services-agile1">
 					<i class="fa fa-magic i1" aria-hidden="true"></i>
 					<h4>Duty Driver</h4>
 					<div class="clearfix"></div>
-					<p>First Name, Last Name</p>
+					
+					{% block dutydriver %}
+					{% endblock %}
 				</div>
 				<div class="left-services-agile1">
 					<i class="fa fa-magic i1" aria-hidden="true"></i>
 					<h4>Sergeant Of the Guard</h4>
 					<div class="clearfix"></div>
-					<p>First Name, Last Name</p>
+					
+					{% block sergeantofguard %}
+					{% endblock %}
 				</div>
 			</div>
+			{% block meallist %}
+			{% endblock %}
 			<div class="col-md-6 agileits_updates_grid_right">
 				<h3>Helpful Information</h3>
 				<a name=services></a>
@@ -294,7 +304,8 @@
 						</div>
 						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 							<div class="panel-body panel_text">
-								Info
+							
+							
 							</div>
 						</div>
 					</div>

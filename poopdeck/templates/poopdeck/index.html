@@ -24,6 +24,8 @@
 {% endblock %}
 
 
+
+
 <!-------------------------->
 <!-- MEAL LIST VIEW CODE-->
 <!-------------------------->
@@ -68,4 +70,39 @@
 
 
 {% endblock %}
+
+{% block company %}
+
+{% for cgr in cgr %}
+                <li>{{cgr.Company}}</li>
+        {% endfor %}
+
+{% endblock %}
+
+{% block durationrange %}
+
+{% for cgr in cgr %}
+                <li>{{cgr.DurationRange}}</li>
+        {% endfor %}
+
+{% endblock %}
+
+{% block dutydriver %}
+
+{% for cgr in cgr %}
+                <li>{{cgr.DutyDriver}}</li>
+        {% endfor %}
+
+{% endblock %}
+
+{% block sergeantofguard %}
+
+{% for cgr in cgr %}
+                <li>{{cgr.SergeantOfGuard}}</li>
+        {% endfor %}
+
+{% endblock %}
+
+
+
 
