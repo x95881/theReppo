@@ -554,11 +554,8 @@ h3.title {
 /*-- stats --*/
 
 .stats {
-<<<<<<< HEAD
+
     background: url(../images/boxingcadets.jpg) no-repeat 0px 0px;
-=======
-    background: url(../images/marchingcadets.jpg) no-repeat 0px 0px;
->>>>>>> 6d0f6a615c61be69bc331095f30188f8d9d6255b
     padding: 100px 0;
     background-size: cover;
     -webkit-background-size: cover;
