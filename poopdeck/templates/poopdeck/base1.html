@@ -64,7 +64,7 @@
 						</button>
 						<div class="logo">
 							<h1>
-								<a href="index.html">
+								<a href="index.html" style="-webkit-text-stroke: 1px black; color: gold;">
 									Poop Deck App
 									<img class="logo-position" src="images/logo4.png" alt="" />
 								</a>
@@ -114,7 +114,7 @@
 						<li>
 
 							<div class="banner-w3lstext">
-								<h3>Welcome to the world's premier leadership institute</h3>
+								<h3 style="-webkit-text-stroke: .5px black;">Welcome to the world's premier leadership institute</h3>
 								 
 							                
 
@@ -131,7 +131,7 @@
 						<li>
 
 							<div class="banner-w3lstext">
-								<h3>New and Improved Poop Deck App!</h3>
+								<h3 style="-webkit-text-stroke: .5px black;">New and Improved Poop Deck App!</h3>
 								<p>Better than before!</p>
 							<!--	<div class="video-pop-wthree">
 									<a href="#small-dialog2" class="view play-icon popup-with-zoom-anim ">
@@ -145,7 +145,7 @@
 						<li>
 
 							<div class="banner-w3lstext">
-								<h3>Refer to the top navigation bar for quick reference!</h3>
+								<h3 style="-webkit-text-stroke: .5px black;">Refer to the top navigation bar for quick reference!</h3>
 							
 							<!--	<div class="video-pop-wthree">
 									<a href="#small-dialog3" class="view play-icon popup-with-zoom-anim ">
@@ -171,9 +171,7 @@
 			<h3 class="title" >West Point Status
 				<img src="images/logo2.png" alt="" />
 			</h3>
-
-			<h4> [CODE RED] </h4>
-			<br>
+			<h2 style="color: gold; -webkit-text-stroke: .5px black;"> Normal Army Day </h2>
 			<br>
 			<br>
 			<div class="about-top">
@@ -182,9 +180,13 @@
 				</div>
 				<div class="col-md-6 about-wel">
 					<a name=events></a>
-					<h2>Event List</h2>
+					<h2 style="color: gold; -webkit-text-stroke: .5px black;">Event List</h2>
+					<br>
+					<br>
 					{% block content %}
+					
 					{% endblock %}
+					<br>
 					<p>
 					Todays date is:
 					<script> document.write(new Date().toLocaleDateString()); </script> <!-- https://stackoverflow.com/questions/32540044/html-display-current-date -->
@@ -192,13 +194,13 @@
 					<a name=events></a>
 					<ul>
 						<li>
-							<i class="glyphicon glyphicon-ok"></i>Check your meals!</li>
+							<i class="glyphicon glyphicon-ok"></i>Do your PDRs</li>
 						<li>
-							<i class="glyphicon glyphicon-ok"></i>Look up upcoming events.</li>
+							<i class="glyphicon glyphicon-ok"></i>CCDP for 4th and 3rd class</li>
 						<li>
-							<i class="glyphicon glyphicon-ok"></i>Christian Banks is an idiot</li>
+							<i class="glyphicon glyphicon-ok"></i>Coem to the town hall meeting</li>
 						<li>
-							<i class="glyphicon glyphicon-ok"></i>Nick Velez is a dumbass</li>
+							<i class="glyphicon glyphicon-ok"></i>TEE's in two weeks!</li>
 					</ul>
 					<!-- <div class="video-agile">
 						<iframe src="https://player.vimeo.com/video/137808596?title=0&byline=0&portrait=0"></iframe>
@@ -241,54 +243,68 @@
 		<div class="container">
 			<a name=cgr></a>
 			<h3 class="title">CGR
+				<br>
 				<p>	
 				Todays date is:
 				<script> document.write(new Date().toLocaleDateString()); </script> <!-- https://stackoverflow.com/questions/32540044/html-display-current-date -->
 				</p>
 				<img src="images/logo2.png" alt="" />
 			</h3>
-				{% block cgrlist %}
-				{% endblock %}
+				<!--{% block cgrlist %}
+				{% endblock %} -->
 			<div class="col-md-6 left-services-agile">
 				<div class="left-services-agile1">
 					<i class="fa fa-clone i1" aria-hidden="true"></i>
 					<h4>Company</h4>
 					<div class="clearfix"></div>
-					
+					<br>
 					{% block company %}
 					{% endblock %}
+					<br>
 				</div>
 				<div class="left-services-agile1">
 					<i class="fa fa-american-sign-language-interpreting i1" aria-hidden="true"></i>
 					<h4>Duration</h4>
 					<a name=meals></a>
 					<div class="clearfix"></div>
-					
+					<br>
 					{% block durationrange %}
 					{% endblock %}
-
-				
+					<br>
+					
 				</div>
 				<div class="left-services-agile1">
 					<i class="fa fa-magic i1" aria-hidden="true"></i>
 					<h4>Duty Driver</h4>
 					<div class="clearfix"></div>
-					
+					<br>
 					{% block dutydriver %}
 					{% endblock %}
+					<br>
 				</div>
 				<div class="left-services-agile1">
 					<i class="fa fa-magic i1" aria-hidden="true"></i>
 					<h4>Sergeant Of the Guard</h4>
 					<div class="clearfix"></div>
-					
+					<br>
 					{% block sergeantofguard %}
 					{% endblock %}
+					<br>
 				</div>
 			</div>
+			<br>
+			<br>
+			<br>
+			{% block services %}
+			{% endblock %}	
+
 			{% block meallist %}
 			{% endblock %}
-			<div class="col-md-6 agileits_updates_grid_right">
+
+			<br>
+			<br>
+			<br>
+			<!-- <div class="col-md-6 agileits_updates_grid_right">
 				<h3>Helpful Information</h3>
 				<a name=services></a>
 				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -362,6 +378,7 @@
 			<div class="clearfix"> </div>
 		</div>
 	</div>
+	-->
 	<!-- //services -->
 
 	<!-- team -->

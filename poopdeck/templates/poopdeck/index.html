@@ -11,7 +11,7 @@
 {% if events %}
 <ul>
 	{% for event in events %}
-		<li><a href="event/{{event.id}}">{{event.Description}}</a>. The Event will be held at: {{event.Location}}. This Event is: {{event.ImportanceStatus}} importance.</li>
+		<h3><a href="event/{{event.id}}">{{event.Description}}</a>. The Event will be held at: {{event.Location}}. This Event is: {{event.ImportanceStatus}} importance.</h3>
 	{% endfor %}
 <ul>
 {% else %}
@@ -37,14 +37,15 @@
 {% if meals %}
 <ul>
         {% for meal in meals %}
-                <li><a href="meal/{{meal.id}}">{{meal.TypeofMeal}}</a> Occasion {{meal.SpecialOccasion}} and located at {{meal.Location}} for {{meal.DurationRange}}. Any Annoucements: {{meal.AnnouncementsMade}}</li>
+		<br>
+                <h3><a href="meal/{{meal.id}}"><h1 style="color:gold; -webkit-text-stroke: .5px black;">{{meal.SpecialOccasion}}</h1></a></h3>
         {% endfor %}
 <ul>
 {% else %}
 <p> Not sure what goes here </p>
 {% endif %}
 
-<a href="add"> Add Meal to the Database </a>
+<!-- <a href="add"> Add Meal to the Database </a> -->
 
 {% endblock %}
 
@@ -74,7 +75,7 @@
 {% block company %}
 
 {% for cgr in cgr %}
-                <li>{{cgr.Company}}</li>
+                <h3>{{cgr.Company}}</h3>
         {% endfor %}
 
 {% endblock %}
@@ -82,7 +83,7 @@
 {% block durationrange %}
 
 {% for cgr in cgr %}
-                <li>{{cgr.DurationRange}}</li>
+                <h3>{{cgr.DurationRange}}</h3>
         {% endfor %}
 
 {% endblock %}
@@ -90,7 +91,7 @@
 {% block dutydriver %}
 
 {% for cgr in cgr %}
-                <li>{{cgr.DutyDriver}}</li>
+                <h3>{{cgr.DutyDriver}}</h3>
         {% endfor %}
 
 {% endblock %}
@@ -98,10 +99,29 @@
 {% block sergeantofguard %}
 
 {% for cgr in cgr %}
-                <li>{{cgr.SergeantOfGuard}}</li>
+                <h3>{{cgr.SergeantOfGuard}}</h3>
         {% endfor %}
 
 {% endblock %}
+
+
+<!-------------------------->
+<!-- SERVICES VIEW CODE-->
+<!-------------------------->
+
+{% block services %}
+
+{% for services in services %}
+	<h2>{{services.Description}}</h2>
+	<br>
+	<p>Hours of Operation: {{services.DurationRange}} </p>
+	<p>Location: {{services.Location}} </p>
+	<p>Status: {{services.Status}} </p>
+	<br>
+        {% endfor %}
+
+{% endblock %}
+
 
 
 
