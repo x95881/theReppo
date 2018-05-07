@@ -6,20 +6,19 @@
 <!-------------------------->
 
 {% block content %}
-<h1>Events List </h2>
+
 
 {% if events %}
 <ul>
 	{% for event in events %}
-		<li><a href="event/{{event.id}}">{{event.Description}}</a> Showing at {{event.Location}} and the importance is {{event.ImportanceStatus}}</li>
+		<li><a href="event/{{event.id}}">{{event.Description}}</a>. The Event will be held at: {{event.Location}}. This Event is: {{event.ImportanceStatus}} importance.</li>
 	{% endfor %}
 <ul>
 {% else %}
-<p> Not sure what goes here </p>
 {{day.id}} : {{day.CalendarDate}}
 {% endif %}
 
-<a href="add"> Add Event to the database </a>
+<!-- <a href="add"> Add Event to the database </a> -->
 
 
 {% endblock %}
